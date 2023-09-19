@@ -1,0 +1,105 @@
+1. Write a python script to add comments and print “Learning Python” on screen.
+# This is a comment
+# Print the message
+print("Learning Python")
+
+2. Write a python script to add multi line comments and print values of four variables, each in a new line. Variable contains any values.
+"""
+This is a multi-line comment.
+It can span multiple lines.
+"""
+
+# Define four variables with values
+var1 = 10
+var2 = "Hello"
+var3 = True
+var4 = 3.14
+
+# Print values of the variables
+print(var1)
+print(var2)
+print(var3)
+print(var4)
+
+3. Write a python script to print types of variables. Create 5 variables each of them containing different types of data. (like 35, True, “MySirG”,5.46, 3+4j, etc)
+var1 = 35
+var2 = True
+var3 = "MySirG"
+var4 = 5.46
+var5 = 3 + 4j
+
+print(type(var1))
+print(type(var2))
+print(type(var3))
+print(type(var4))
+print(type(var5))
+
+4. Write a python script to print the id of two variables containing the same integer values.
+num1 = 10
+num2 = 10
+
+print("ID of num1:", id(num1))
+print("ID of num2:", id(num2))
+
+5. Create four variables in a Python script and assign values of different data types to them. Write a Python script to print value, its type and id of each variable
+var1 = 42
+var2 = "Hello, Python!"
+var3 = 3.14
+var4 = True
+
+print("Value of var1:", var1)
+print("Type of var1:", type(var1))
+print("ID of var1:", id(var1))
+
+print("Value of var2:", var2)
+print("Type of var2:", type(var2))
+print("ID of var2:", id(var2))
+
+print("Value of var3:", var3)
+print("Type of var3:", type(var3))
+print("ID of var3:", id(var3))
+
+print("Value of var4:", var4)
+print("Type of var4:", type(var4))
+print("ID of var4:", id(var4))
+
+6. Write a python script to print all the keywords
+import keyword
+
+keywords = keyword.kwlist
+print(keywords)
+
+7. On Python shell use help() function and display the list of keywords
+>>> import keyword
+>>> help(keyword)
+
+8. Create two Python files A0.py and A1.py. Create a variable in A1.py and assign some value to it. Write a python script to import A1 module in A0 and print value of the variable created in A0.py
+# A1.py
+variable_in_A1 = "This is a value from A1.py"
+
+# A0.py
+import A1
+
+print(A1.variable_in_A1)
+
+9. Name the keywords, used as data in the Python script.
+In Python, we can use keywords as variable names by enclosing them in backticks or using an underscore at the end. For example:
+
+import `if`
+from `import` import *
+
+def `def`():
+    return `return`
+
+10. Write a python script to display the current date and time. First create variables to store date and time, then display date and time in proper format (like: 13-8-2022 and 9:00 PM)
+from datetime import datetime
+
+# Get the current date and time
+current_datetime = datetime.now()
+
+# Format and print the date and time
+formatted_date = current_datetime.strftime("%d-%m-%Y")
+formatted_time = current_datetime.strftime("%I:%M %p")
+
+print("Date:", formatted_date)
+print("Time:", formatted_time)
