@@ -1,0 +1,52 @@
+1. Write a python script to convert a number into str type.
+number = int(input("Enter the Number"))
+str_number = str(number)
+print(str_number)
+
+2. Write a python script to print Unicode of the character ‘m’
+char = 'm'
+unicode_value = ord(char)
+print(f"The Unicode of '{char}' is {unicode_value}")
+
+3. Write a python script to print character representation of a given unicode 100.
+unicode_value = 100
+char = chr(unicode_value)
+print(f"The character representation of Unicode {unicode_value} is '{char}'")
+
+4. Write a python script to print any number and its binary equivalent
+number = int(input("Enter the Number"))
+binary_representation = bin(number)
+print(f"Number: {number}, Binary: {binary_representation}")
+
+5. Write a python script to print any number and its octal equivalent.
+number = int(input("Enter the Number"))
+octal_representation = oct(number)
+print(f"Number: {number}, Octal: {octal_representation}")
+
+6. Write a python script to print any number and its hexadecimal equivalent.
+number = int(input("Enter the Number"))
+hexadecimal_representation = hex(number)
+print(f"Number: {number}, Hexadecimal: {hexadecimal_representation}")
+
+7. Write a python script to store binary number 1100101 in a variable and print it in decimal format.
+binary_number = "1100101"
+decimal_number = int(binary_number, 2)
+print(f"Binary: {binary_number}, Decimal: {decimal_number}")
+
+8. Write a python script to store a hexadecimal number 2F in a variable and print it in octal format.
+hexadecimal_number = "2F"
+decimal_number = int(hexadecimal_number, 16)
+octal_representation = oct(decimal_number)
+print(f"Hexadecimal: {hexadecimal_number}, Octal: {octal_representation}")
+
+9. Write a python script to store an octal number 125 in a variable and print it in binary format.
+hexadecimal_number = "2F"
+decimal_number = int(hexadecimal_number, 16)
+octal_representation = oct(decimal_number)
+print(f"Hexadecimal: {hexadecimal_number}, Octal: {octal_representation}")
+
+10. Write a python script to add two numbers 25 (in octal) and 39 (in hexadecimal) and display the result in binary format.
+octal_number = "125"
+decimal_number = int(octal_number, 8)
+binary_representation = bin(decimal_number)
+print(f"Octal: {octal_number}, Binary: {binary_representation}")
