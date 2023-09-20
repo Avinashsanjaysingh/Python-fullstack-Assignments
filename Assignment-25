@@ -1,0 +1,130 @@
+1. Write a python script to create a Profile class with 3 attributes (name, email, age).
+class Profile:
+    def __init__(self, name, email, age):
+        self.name = name
+        self.email = email
+        self.age = age
+
+2. Write a python script to update the above Profile class with encapsulation.
+class Profile:
+    def __init__(self, name, email, age):
+        self.__name = name
+        self.__email = email
+        self.__age = age
+    
+    def get_name(self):
+        return self.__name
+    
+    def set_name(self, name):
+        self.__name = name
+    
+    def get_email(self):
+        return self.__email
+    
+    def set_email(self, email):
+        self.__email = email
+    
+    def get_age(self):
+        return self.__age
+    
+    def set_age(self, age):
+        self.__age = age
+
+3. Write a python script to update 2nd Question, change email and age to __email and __age.
+class Profile:
+    def __init__(self, name, email, age):
+        self.__name = name
+        self.__email = email
+        self.__age = age
+    
+    def get_name(self):
+        return self.__name
+    
+    def set_name(self, name):
+        self.__name = name
+    
+    def get_email(self):
+        return self.__email
+    
+    def set_email(self, email):
+        self.__email = email
+    
+    def get_age(self):
+        return self.__age
+    
+    def set_age(self, age):
+        self.__age = age
+
+4. Write a python script to update 2nd Question, add a class variable (platform) and create a classmethod to access it.
+class Profile:
+    platform = "Social Media"
+    
+    def __init__(self, name, email, age):
+        self.__name = name
+        self.__email = email
+        self.__age = age
+    
+    @classmethod
+    def get_platform(cls):
+        return cls.platform
+
+5. Write a python script to create a Calculator class with 2 methods for adding and subtracting 2 values.
+class Calculator:
+    def add(self, a, b):
+        return a + b
+    
+    def subtract(self, a, b):
+        return a - b
+
+6. Write a python script to create a Calculator 2.0 class with 2 methods for multiplication
+and division of 2 values and inherit it from the Calculator class.
+class Calculator2(Calculator):
+    def multiply(self, a, b):
+        return a * b
+    
+    def divide(self, a, b):
+        if b != 0:
+            return a / b
+        else:
+            return "Cannot divide by zero"
+
+7. Write a python script to create a Phone class with 2 methods to print the features (calling and sms).
+class Phone:
+    def call(self):
+        print("Calling...")
+    
+    def sms(self):
+        print("Sending SMS...")
+
+8. Write a python script to create a SmartPhone class by inheriting Calculator 2.0 and Phone Class.
+class SmartPhone(Calculator2, Phone):
+    def __init__(self, model):
+        self.model = model
+
+9. Write a python script to create an application like Truecaller where names and
+numbers are stored. Truecaller class will have 2 methods (1st to fetch the name of a
+number and 2nd to add a new entry).
+
+class Truecaller:
+    def __init__(self):
+        self.entries = {}
+    
+    def fetch_name(self, number):
+        return self.entries.get(number, "Name not found")
+    
+    def add_entry(self, number, name):
+        self.entries[number] = name
+
+10. Write a python script to add the new method in SmartPhone class which accepts
+Truecaller object as a parameter and call the fetch method of Truecaller.
+
+class SmartPhone(Calculator2, Phone):
+    def __init__(self, model):
+        self.model = model
+    
+    def lookup_name(self, truecaller, number):
+        name = truecaller.fetch_name(number)
+        if name != "Name not found":
+            print(f"Caller's Name: {name}")
+        else:
+            print("Name not found in Truecaller")
