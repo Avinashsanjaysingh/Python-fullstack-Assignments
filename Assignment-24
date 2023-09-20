@@ -1,0 +1,161 @@
+1. Write a python program to create a user class with 3 properties : name, age, email.
+my_set = {1, 2, 3, 4, 5}
+iterator = iter(my_set)
+
+while True:
+    try:
+        element = next(iterator)
+        print(element)
+    except StopIteration:
+        break
+
+2. Write a python program to create a user class with a method to greet the user.
+def generate_odd_numbers(n):
+    num = 1
+    count = 0
+    while count < n:
+        yield num
+        num += 2
+        count += 1
+
+# Usage:
+odd_gen = generate_odd_numbers(5)
+for num in odd_gen:
+    print(num)
+
+3. Write a python program to create 2 objects of the user class and assign different values.
+def generate_even_numbers(n):
+    num = 2
+    count = 0
+    while count < n:
+        yield num
+        num += 2
+        count += 1
+
+# Usage:
+even_gen = generate_even_numbers(5)
+for num in even_gen:
+    print(num)
+
+4. Write a python program to init default values for user object using __init__ method.
+def generate_square_numbers(n):
+    num = 1
+    count = 0
+    while count < n:
+        yield num ** 2
+        num += 1
+        count += 1
+
+# Usage:
+square_gen = generate_square_numbers(5)
+for num in square_gen:
+    print(num)
+
+5. Write a python program to delete the age property of the user.
+def generate_fibonacci_numbers(n):
+    a, b = 0, 1
+    count = 0
+    while count < n:
+        yield a
+        a, b = b, a + b
+        count += 1
+
+# Usage:
+fibonacci_gen = generate_fibonacci_numbers(5)
+for num in fibonacci_gen:
+    print(num)
+
+6. Write a python program to create 3 user objects and find the youngest of all.
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def generate_prime_numbers(n):
+    num = 2
+    count = 0
+    while count < n:
+        if is_prime(num):
+            yield num
+            count += 1
+        num += 1
+
+# Usage:
+prime_gen = generate_prime_numbers(5)
+for num in prime_gen:
+    print(num)
+
+7. Write a python program to create a Laptop class with 4 attributes (brand, ram, cpu,
+hdd) and 2 methods (showConfig() to print the values, __init__() to initialize the
+values).
+
+def generate_endless_fibonacci():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+# Usage:
+endless_fibonacci_gen = generate_endless_fibonacci()
+for num in endless_fibonacci_gen:
+    print(num)
+
+8. WRT 7th Question, create 3 Laptop objects and add them to the list in the sorted
+order based on the ram size.
+
+def generate_endless_primes():
+    num = 2
+    while True:
+        if is_prime(num):
+            yield num
+        num += 1
+
+# Usage:
+endless_prime_gen = generate_endless_primes()
+for num in endless_prime_gen:
+    print(num)
+
+9. Write a python program to create a School class and 3 instance variables and 1 class variable.
+def is_valid_triangle(func):
+    def wrapper(a, b, c):
+        if a + b > c and a + c > b and b + c > a:
+            return func(a, b, c)
+        else:
+            return "Invalid Triangle"
+    return wrapper
+
+@is_valid_triangle
+def calculate_perimeter(a, b, c):
+    return a + b + c
+
+# Usage:
+result = calculate_perimeter(3, 4, 5)  # Valid triangle
+
+10. Define a class Employee with instance object variables empid, name, salary. Write
+__init__() method in the class to initialize instance object variables. Also define
+instance methods to input fields and display field values.
+
+def is_coprime(func):
+    def wrapper(a, b):
+        def gcd(x, y):
+            while y:
+                x, y = y, x % y
+            return x
+        
+        if gcd(a, b) == 1:
+            return func(a, b)
+        else:
+            return "Numbers are not co-prime"
+    return wrapper
+
+@is_coprime
+def calculate_hcf(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+# Usage:
+result = calculate_hcf(8, 15)  # Co-prime numbers
