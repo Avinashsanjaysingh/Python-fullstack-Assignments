@@ -1,0 +1,57 @@
+1. Write a python script to create a String in 3 different possible ways
+# Using single quotes
+string1 = 'Hello, Python!'
+
+# Using double quotes
+string2 = "Hello, Python!"
+
+# Using triple quotes for multi-line strings
+string3 = '''Hello,
+Python!'''
+
+2. Write a python script to Get the characters from the start to position 5 (Given String “iNeuron” using the slice syntax)
+given_string = "iNeuron"
+sliced_characters = given_string[:5]
+
+3. Write a python script to Get the characters from position 2 to position 5 (Given String “Hello Learners” using the slice syntax)
+given_string = "Hello Learners"
+sliced_characters = given_string[2:6]
+
+4. Write a python script to demonstrate String Concatenation adding space in between (Given Strings a=”Learning” b=”Python” )
+a = "Learning"
+b = "Python"
+concatenated_string = a + " " + b
+
+5. Write a python script to get the count of total number of characters in String a=“iNeuron”
+a = "iNeuron"
+character_count = len(a)
+
+6. Write a python script to reverse a String. (“iNeuron”)
+original_string = "iNeuron"
+reversed_string = original_string[::-1]
+
+7. Write a python script to determine whether a string contains a specific substring.
+main_string = "Hello, Python!"
+substring = "Python"
+if substring in main_string:
+    contains_substring = True
+else:
+    contains_substring = False
+
+8. Write a python script to check if a string contains only numbers.
+input_string = "12345"
+if input_string.isdigit():
+    contains_only_numbers = True
+else:
+    contains_only_numbers = False
+
+9. Write a python script to check if a string contains only characters of the alphabet.
+input_string = "abcDEF"
+if input_string.isalpha():
+    contains_only_alphabet_characters = True
+else:
+    contains_only_alphabet_characters = False
+
+10. Write a python script to convert an integer to a string.
+integer_value = 42
+string_value = str(integer_value)
