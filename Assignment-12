@@ -1,0 +1,163 @@
+1. Write a python script to reverse a number.
+number = int(input("Enter a number: "))
+reversed_number = int(str(abs(number))[::-1])
+if number < 0:
+    reversed_number = -reversed_number
+print(f"The reversed number is {reversed_number}")
+
+2. Write a python script to check whether a given number is Prime or not
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+number = int(input("Enter a number: "))
+if is_prime(number):
+    print(f"{number} is a prime number.")
+else:
+    print(f"{number} is not a prime number.")
+
+3. Write a python script to print all Prime numbers under 100
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+for num in range(2, 101):
+    if is_prime(num):
+        print(num, end=" ")
+
+4. Write a python script to print all Prime numbers between two given numbers (both values inclusive)
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+start = int(input("Enter the starting number: "))
+end = int(input("Enter the ending number: "))
+
+print(f"Prime numbers between {start} and {end}:")
+for num in range(start, end + 1):
+    if is_prime(num):
+        print(num, end=" ")
+
+5. Write a python script to find next prime number of a given number
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+number = int(input("Enter a number: "))
+next_prime = number + 1
+while not is_prime(next_prime):
+    next_prime += 1
+print(f"The next prime number after {number} is {next_prime}")
+
+6. Write a python script to print first N prime numbers
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+N = int(input("Enter the value of N: "))
+prime_count = 0
+num = 2
+while prime_count < N:
+    if is_prime(num):
+        print(num, end=" ")
+        prime_count += 1
+    num += 1
+
+7. Write a python script to check whether a given pair of numbers are co-Prime numbers or not.
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+
+if gcd(num1, num2) == 1:
+    print(f"{num1} and {num2} are co-prime numbers.")
+else:
+    print(f"{num1} and {num2} are not co-prime numbers.")
+
+8. Write a python script to print first N terms of a Fibonacci series
+N = int(input("Enter the value of N: "))
+a, b = 0, 1
+print("Fibonacci Series:")
+for _ in range(N):
+    print(a, end=" ")
+    a, b = b, a + b
+
+9. Write a python script to calculate LCM of two numbers
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    return (a * b) // gcd(a, b)
+
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+
+lcm_result = lcm(num1, num2)
+print(f"The LCM of {num1} and {num2} is {lcm_result}")
+
+10. Write a python script to calculate HCF of two numbers
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+
+hcf_result = gcd(num1, num2)
+print(f"The HCF of {num1} and {num2} is {hcf_result}")
