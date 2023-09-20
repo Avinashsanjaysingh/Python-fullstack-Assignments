@@ -1,0 +1,86 @@
+1. Write a python program to create a simple function which prints “MySirG” .
+def print_mysirg():
+    print("MySirG")
+
+# Calling the function
+print_mysirg()
+
+2. Write a python program to create a function which expects two arguments and print them in the function body.
+def print_arguments(arg1, arg2):
+    print(arg1, arg2)
+
+# Calling the function
+print_arguments("Hello", "Python")
+
+3. Write a python program to create a function which expects an unknown number of arguments.
+def print_arguments(*args):
+    for arg in args:
+        print(arg)
+
+# Calling the function
+print_arguments("Hello", "Python", "Programming")
+
+4. Write a python program to create a function which expects kwargs arguments.
+def print_kwargs(**kwargs):
+    for key, value in kwargs.items():
+        print(key, value)
+
+# Calling the function
+print_kwargs(name="John", age=30, city="New York")
+
+5. Write a python program to create a function which expects a list as an argument.
+def process_list(input_list):
+    for item in input_list:
+        print(item)
+
+# Calling the function
+my_list = [1, 2, 3, 4, 5]
+process_list(my_list)
+
+6. Write a python program to create a function that finds a maximum of four numbers.
+def find_max(a, b, c, d):
+    max_value = max(a, b, c, d)
+    return max_value
+
+# Calling the function
+result = find_max(10, 5, 20, 15)
+
+7. Write a python program to sum all the numbers in a list.
+def sum_numbers(numbers):
+    total = sum(numbers)
+    return total
+
+# Calling the function
+my_numbers = [1, 2, 3, 4, 5]
+result = sum_numbers(my_numbers)
+
+8. Write a python program to multiply all the numbers in a list.
+def multiply_numbers(numbers):
+    product = 1
+    for num in numbers:
+        product *= num
+    return product
+
+# Calling the function
+my_numbers = [2, 3, 4]
+result = multiply_numbers(my_numbers)
+
+9. Write a python program to create a function to check whether a number falls in a given range.
+def is_in_range(number, lower, upper):
+    if lower <= number <= upper:
+        return True
+    else:
+        return False
+
+# Calling the function
+result = is_in_range(10, 5, 15)
+
+10. Write a python program to create a function to check whether a given number is even or odd.
+def is_even_or_odd(number):
+    if number % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+# Calling the function
+result = is_even_or_odd(7)
