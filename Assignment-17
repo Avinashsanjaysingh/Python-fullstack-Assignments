@@ -1,0 +1,44 @@
+1. Write a python program to store all the programming languages known to you using Set.
+programming_languages = {"Java", "Python", "C++", "JavaScript", "SQL"}
+
+2. Write a python program to store your own information {name, age, gender, so on..}
+my_info = {"name": "John", "age": 30, "gender": "Male", "city": "New York"}
+
+3. Write a python script to get the data type of a Set.
+my_set = {1, 2, 3}
+data_type = type(my_set)
+
+4. Write a Python script to find if “Python” is present in the set. thisset = {"Java", "Python", "Django"}
+thisset = {"Java", "Python", "Django"}
+if "Python" in thisset:
+    python_present = True
+else:
+    python_present = False
+
+5. Write a python program to add items from another set to the current set. thisset = {"Java", "Python", "SQL"} secondset= {"C", "Cpp", "NoSQL"}
+thisset = {"Java", "Python", "SQL"}
+secondset = {"C", "Cpp", "NoSQL"}
+thisset.update(secondset)
+
+6. Write a python program to add elements of list to a set. thisset = {"Python", "Django", "JavaScript"} mylist = ["Java", "C"]
+thisset = {"Python", "Django", "JavaScript"}
+mylist = ["Java", "C"]
+thisset.update(mylist)
+
+7. Write a python program to remove last item of the given set.thisset = {"Python", "Django", "JavaScript", “SQL”}
+thisset = {"Python", "Django", "JavaScript", "SQL"}
+thisset.discard("SQL")
+
+8. Write a python program to delete the set completely.
+thisset = {"Python", "Django", "JavaScript", "SQL"}
+del thisset
+
+9. Write a python program to loop through the set and print values. thisset = {"Python", "Django", "JavaScript", “SQL”}
+thisset = {"Python", "Django", "JavaScript", "SQL"}
+for value in thisset:
+    print(value)
+
+10. Write a python program to find the maximum and minimum value in a set.
+thisset = {10, 20, 5, 30, 15}
+max_value = max(thisset)
+min_value = min(thisset)
