@@ -1,0 +1,115 @@
+1. Write a Python script to print the following status of a file:
+a. Whether a file is read only
+b. Whether a file is closed or not
+c. Which file opening mode is used
+d. Name of the file
+
+def print_file_status(file):
+    if file.closed:
+        print("File is closed.")
+    else:
+        print("File is open.")
+    
+    if file.readable():
+        print("File is readable.")
+    else:
+        print("File is not readable.")
+    
+    if file.writable():
+        print("File is writable.")
+    else:
+        print("File is not writable.")
+    
+    print("File mode:", file.mode)
+    print("File name:", file.name)
+
+# Usage
+with open('example.txt', 'r') as file:
+    print_file_status(file)
+
+2. Write a Python script to create a new file ‘myfile.txt’ and store user entered text.
+user_input = input("Enter text to store in myfile.txt: ")
+with open('myfile.txt', 'w') as file:
+    file.write(user_input)
+
+3. Write a Python script to read the above created file ‘myfile.txt’ and display content on the console.
+with open('myfile.txt', 'r') as file:
+    content = file.read()
+    print(content)
+
+4. Write a Python script to store a list of city names in a file ‘cities.txt’
+cities = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix']
+
+with open('cities.txt', 'w') as file:
+    for city in cities:
+        file.write(city + '\n')
+
+5. Write a Python script to append list of city names in a file ‘cities.txt’
+new_cities = ['San Francisco', 'Miami']
+
+with open('cities.txt', 'a') as file:
+    for city in new_cities:
+        file.write(city + '\n')
+
+6. Write a Python script to search whether a particular city is there in the file ‘cities.txt’ or not
+search_city = 'Chicago'
+
+with open('cities.txt', 'r') as file:
+    cities = file.read().splitlines()
+
+if search_city in cities:
+    print(f"{search_city} is in the list of cities.")
+else:
+    print(f"{search_city} is not in the list of cities.")
+
+7. Write a Python script to count the number of Python keywords occurring in a python source file.
+import keyword
+
+def count_python_keywords(file_name):
+    with open(file_name, 'r') as file:
+        source_code = file.read()
+    
+    keywords = keyword.kwlist
+    keyword_count = 0
+
+    for kw in keywords:
+        keyword_count += source_code.count(kw)
+    
+    return keyword_count
+
+file_name = 'python_source.py'  # Replace with your source file name
+count = count_python_keywords(file_name)
+print(f"Number of Python keywords in {file_name}: {count}")
+
+8. Write a Python script to create a copy of a file.
+import shutil
+
+source_file = 'original.txt'
+destination_file = 'copy.txt'
+
+shutil.copy(source_file, destination_file)
+
+9. Write a Python script to store book data in a file. Book data is in the form of a
+dictionary in which book name is the key and price is its value. Use pickle to store
+data into a file (say bookfile)
+
+import pickle
+
+book_data = {
+    'Book1': 20.99,
+    'Book2': 15.50,
+    'Book3': 30.25
+}
+
+with open('bookfile.pkl', 'wb') as file:
+    pickle.dump(book_data, file)
+
+10. Write a Python script to extract book data from a bookfile using pickle. Also print extracted book data.
+import pickle
+
+with open('bookfile.pkl', 'rb') as file:
+    extracted_data = pickle.load(file)
+
+print("Extracted book data:")
+for book, price in extracted_data.items():
+    print(f"{book}: ${price}")
