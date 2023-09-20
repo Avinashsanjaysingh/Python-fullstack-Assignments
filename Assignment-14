@@ -1,0 +1,41 @@
+1. Write a Python script to create a list of first N natural numbers.
+N = int(input("Enter the value of N: "))
+natural_numbers = list(range(1, N + 1))
+
+2. Write a Python script to create a list of first N odd natural numbers.
+N = int(input("Enter the value of N: "))
+odd_numbers = list(range(1, 2 * N, 2))
+
+3. Write a Python script to create a list of first N even natural numbers.
+N = int(input("Enter the value of N: "))
+even_numbers = list(range(2, 2 * N + 1, 2))
+
+4. Write a Python script to find the greatest number in a given list of numbers.
+numbers = [12, 45, 78, 34, 56, 89, 23]
+max_number = max(numbers)
+
+5. Write a Python script to find the smallest number in a given list of numbers.
+numbers = [12, 45, 78, 34, 56, 89, 23]
+min_number = min(numbers)
+
+6. Write a Python script to calculate the sum of elements in a given list of numbers.
+numbers = [12, 45, 78, 34, 56, 89, 23]
+sum_of_numbers = sum(numbers)
+
+7. Write a Python script to remove all non int values from a list.
+mixed_list = [10, "apple", 20, "banana", 30, "cherry"]
+integer_list = [x for x in mixed_list if isinstance(x, int)]
+
+8. Write a Python script to print distinct elements along with their frequencies of occurrence in the list.
+numbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+distinct_elements = list(set(numbers))
+frequencies = {element: numbers.count(element) for element in distinct_elements}
+
+9. Write a Python script to print indices of all occurrences of a given element in a given list.
+numbers = [10, 20, 30, 20, 40, 20, 50]
+element_to_find = 20
+indices = [i for i, x in enumerate(numbers) if x == element_to_find]
+
+10. Write a python script to sort a list.
+numbers = [45, 23, 12, 67, 89, 34]
+sorted_numbers = sorted(numbers)
