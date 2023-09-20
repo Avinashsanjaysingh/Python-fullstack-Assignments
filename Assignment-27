@@ -1,0 +1,111 @@
+1. Write a python script to create a ArithmeticError.
+try:
+    result = 10 / 0
+except ArithmeticError as e:
+    print(f"ArithmeticError: {e}")
+
+2. Write a python script to create a ValueError.
+try:
+    num = int("abc")
+except ValueError as e:
+    print(f"ValueError: {e}")
+
+3. Write a python script to handle the ArithmeticError.
+try:
+    result = 10 / 0
+except ArithmeticError as e:
+    print(f"ArithmeticError: {e}")
+
+4. Write a python script to handle a ValueError.
+try:
+    num = int("abc")
+except ValueError as e:
+    print(f"ValueError: {e}")
+
+5. Write a python script to handle multiple Exception in one try.
+try:
+    result = 10 / 0
+except ZeroDivisionError as e:
+    print(f"ZeroDivisionError: {e}")
+except ArithmeticError as e:
+    print(f"ArithmeticError: {e}")
+
+6. Write a python script to create a calculator with 4 basic operations, and handle a maximum number of exceptions.
+def calculate(operation, num1, num2):
+    try:
+        if operation == 'add':
+            return num1 + num2
+        elif operation == 'subtract':
+            return num1 - num2
+        elif operation == 'multiply':
+            return num1 * num2
+        elif operation == 'divide':
+            return num1 / num2
+        else:
+            raise ValueError("Invalid operation")
+    except ZeroDivisionError as e:
+        print(f"ZeroDivisionError: {e}")
+    except ArithmeticError as e:
+        print(f"ArithmeticError: {e}")
+    except ValueError as e:
+        print(f"ValueError: {e}")
+    except Exception as e:
+        print(f"Exception: {e}")
+
+result = calculate('divide', 10, 0)
+
+7. Write a python script to add a finally block for the above script.
+def calculate(operation, num1, num2):
+    try:
+        if operation == 'add':
+            return num1 + num2
+        elif operation == 'subtract':
+            return num1 - num2
+        elif operation == 'multiply':
+            return num1 * num2
+        elif operation == 'divide':
+            return num1 / num2
+        else:
+            raise ValueError("Invalid operation")
+    except ZeroDivisionError as e:
+        print(f"ZeroDivisionError: {e}")
+    except ArithmeticError as e:
+        print(f"ArithmeticError: {e}")
+    except ValueError as e:
+        print(f"ValueError: {e}")
+    except Exception as e:
+        print(f"Exception: {e}")
+    finally:
+        print("Calculation complete")
+
+result = calculate('divide', 10, 0)
+
+8. Write a python script to implement try except and else block for division.
+try:
+    num1 = int(input("Enter the numerator: "))
+    num2 = int(input("Enter the denominator: "))
+    result = num1 / num2
+except ZeroDivisionError as e:
+    print(f"ZeroDivisionError: {e}")
+except ValueError as e:
+    print(f"ValueError: {e}")
+else:
+    print(f"Result: {result}")
+
+9. Write a python script to raise a ValueError.
+try:
+    raise ValueError("This is a custom ValueError")
+except ValueError as e:
+    print(f"ValueError: {e}")
+
+10. Write a python script to implemented a nested Try Except block.
+try:
+    num = int(input("Enter a number: "))
+    try:
+        result = 10 / num
+    except ZeroDivisionError as e:
+        print(f"ZeroDivisionError: {e}")
+except ValueError as e:
+    print(f"ValueError: {e}")
+else:
+    print(f"Result: {result}")
